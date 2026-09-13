@@ -22,19 +22,22 @@
   "embedded_fonts": {
     "NotoSansSC-Regular.ttf": "62513a5d6706afa489edfd29e1c860d076a3d36f0ba865fa917ebb79a96dfef8"
   },
-  "wasm_sha256": "e0ded366380119a64d22c632780e10c789214f3c80bb26b1ab7ade342c5e15e9",
+  "asset_policy": "Browser validates iframe same-origin card-assets; WASM renderer permits only loopback and explicit Octosense HTTPS card-assets bases; native renderer remains loopback-only",
+  "wasm_sha256": "9fa202972d4e85ab67507b0f8f41718655c198d59b62b34b75cfeee9a6e502f0",
+  "cache_version": "9fa202972d4e85ab67507b0f8f41718655c198d59b62b34b75cfeee9a6e502f0",
   "sources": {
     "wizard/wasm-host/Cargo.toml": "f63447097cc078d8ce0a105c1e21d15672380865c8dfa572cf7969d300d3efd5",
     "wizard/wasm-host/Cargo.lock": "5ec2418c2a026408716236f650da9cc4284d3a4a19ae287360a84b2873f12605",
     "wizard/wasm-host/src/main.rs": "f46836faccad97915d04e62b86ed6e485a26640e6f676593a3add4110da91e0e",
-    "wizard/wasm-host/bridge.mjs": "15e04fed5965bcf345d0fb94d1636611dde69e87a2bcc5ead8fddcf009e0f495",
-    "wizard/build-wasm.sh": "5eadf166d1974732fce3ecdcd7223cb35b2fefb37ee3c07e2562ccf08ba42730",
+    "wizard/wasm-host/bridge.mjs": "6f6c17c4d7efcb76f4588afeedc9113021a1d1646f1c953ed4cd28f6e7616f0d",
+    "wizard/build-wasm.sh": "68b71b3eec93318f202ebf31ba7af135c8dd029d2c80e9d7daae5baea9c202c1",
     "pipeline/makepad/draw/src/text/fonts.rs": "c5f16d855e77294c5d17850ef4511ac2e92c37e5c2a295e9e353c3054a0ce830",
-    "pipeline/makepad/platform/src/os/web/web.js": "73fb013097edcd40c87232b6ce69d814541c0fa5d641ed0e49c29fdface4c53e"
+    "pipeline/makepad/platform/src/os/web/web.js": "73fb013097edcd40c87232b6ce69d814541c0fa5d641ed0e49c29fdface4c53e",
+    "pipeline/splash-makepad/crates/splash-makepad/src/design.rs": "4e2a3d77f832de634690b1625b28f1f38e97104e41ac0df30c029cd8017c126d"
   },
   "files": {
     "THIRD_PARTY_NOTICES.md": "27be32821e1c64a9e2226e8dd12955adb26edeca4b6137f2e4e73d145b7f86be",
-    "bridge.mjs": "15e04fed5965bcf345d0fb94d1636611dde69e87a2bcc5ead8fddcf009e0f495",
+    "bridge.mjs": "924a590ba669bc2128bdd5bd700073348ee036e8eaf995b9019b7c60bbfdb50d",
     "card-assets/aircon-01/assets/back_icon_0-1c814ab0b86b.svg": "1c814ab0b86bc73d160bbf23647a7b213a9cf862afea2af9eae9dbccd0a2a773",
     "card-assets/aircon-01/assets/back_icon_0-23c0f034fd6a.svg": "23c0f034fd6afc76d67644ec247b6d57b64452b91b3c7ff09c207f41e6661ace",
     "card-assets/aircon-01/assets/back_icon_0.svg": "23c0f034fd6afc76d67644ec247b6d57b64452b91b3c7ff09c207f41e6661ace",
@@ -333,7 +336,7 @@
     "card-assets/payment_due-11/assets/wallet_icon_0-ad9266d4ebef.svg": "ad9266d4ebef2712804598eee5535322f54c6c4d15b3ba967f5616e33a3bb72d",
     "card-assets/payment_due-11/assets/wallet_icon_0-daa281cfdc45.svg": "daa281cfdc454a2acb4311fc01c4abd8e63c5b1766b82118bcac62f312e64bed",
     "card-assets/payment_due-11/assets/wallet_icon_0.svg": "ad9266d4ebef2712804598eee5535322f54c6c4d15b3ba967f5616e33a3bb72d",
-    "index.html": "aae03cb8d0b4f18844b7dc9f2344e7b3ca955114212ba283a369dad851d131ed",
+    "index.html": "31c91b633e80f58677b41243cc7263c51a5329de692440b3adb644574664b5e4",
     "licenses/Bundled-fonts.txt": "5a600aff806b3a9cdfd96cbc8e6503a959a3e592c8477764e3bcf967bf79ad7c",
     "licenses/Makepad-MIT.txt": "3855d73a873244ec424ac5781d5d8fc8e2a789ff9d2f1cb804bec585a64ea88f",
     "licenses/NotoSansSC-OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
@@ -368,6 +371,6 @@
     "makepad_widgets/resources/icons/open_left_panel.svg": "6709f838e74e285d7831ea16bf8d482e3ed8c677eea6d8ec7530506dbeba972a",
     "makepad_widgets/resources/icons/sploded.svg": "4a16d4017caf3d1f6b290f8c389768419fe3feafa64551abd9542dfce13726c6",
     "makepad_widgets/resources/jetbrains_mono_variable.ttf": "662a196d58f1183bf2d77428b6d5283fe3f45161ab021bea4036bc98e5cac016",
-    "octosense-wizard.wasm": "e0ded366380119a64d22c632780e10c789214f3c80bb26b1ab7ade342c5e15e9"
+    "octosense-wizard.wasm": "9fa202972d4e85ab67507b0f8f41718655c198d59b62b34b75cfeee9a6e502f0"
   }
 }
