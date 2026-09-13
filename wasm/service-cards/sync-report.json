@@ -3,6 +3,38 @@
   "passed": true,
   "id": "aircon-fresh-v2",
   "destination": "/Users/ychen/home/Octosense-website/public/wasm/service-cards",
+  "additional_flows": [
+    {
+      "id": "school",
+      "bundle_id": "school",
+      "scenes": 12,
+      "bundle_sha256": "728ab700ab2b1673382b9962b82d92015384d7adc2034f93b3d6bcdcc0b0d072",
+      "provenance_sha256": "dfb3b4caf1d9513ec31e8cf3c29f265916ecdf66510bb15ae1f54891ef078ef0",
+      "verified_bundle_sources": 259,
+      "artwork_assets": 81,
+      "screen_rasters_included": false
+    },
+    {
+      "id": "health",
+      "bundle_id": "health",
+      "scenes": 12,
+      "bundle_sha256": "39def8d1c3753cfa3d82fa1e1481641ab46d7a85c47d38fca2f249b806a3eb25",
+      "provenance_sha256": "b644a7704a74c3d9e0f5096966da011daa66931686cc3845a06c07b570191a02",
+      "verified_bundle_sources": 225,
+      "artwork_assets": 64,
+      "screen_rasters_included": false
+    },
+    {
+      "id": "reunion",
+      "bundle_id": "reunion",
+      "scenes": 12,
+      "bundle_sha256": "b12ef8c9d9ddbc25540a96a37065c4da8bdd2244b327926e1968aff507a2eb1f",
+      "provenance_sha256": "967d0024373365a9abc6f338d3772e28c76f44dba7c7f860e10a3bbf70afc625",
+      "verified_bundle_sources": 263,
+      "artwork_assets": 83,
+      "screen_rasters_included": false
+    }
+  ],
   "scenes": 12,
   "artwork_assets": 65,
   "wasm_sha256": "c42772f62a38437ec16a9ba59f7737a3b025287f0d85bd1a52a69b9399c2adfe",
@@ -15,7 +47,17 @@
   "client_source_files": {
     "wizard/service.mjs": "4629bce7f7dd713b1d0dd8e7868574f77993d9ab65aa8e611eaef3711b594c02",
     "wizard/render.mjs": "a3eda8ce56cedc5c2d25e8380fa389fe4d34572416a5335b4051df018877bcd3",
-    "wizard/wizard.mjs": "30c9f56d6d1cea088c640cf9bf6bb2808e21c2bd13b776ded75b74c77902e0b1"
+    "wizard/wizard.mjs": "30c9f56d6d1cea088c640cf9bf6bb2808e21c2bd13b776ded75b74c77902e0b1",
+    "flows/shared/wizard.mjs": "c8820619746b9a2fad60c69b44e5a3686b674016f885ff17cc1d3e48efeb6e2d",
+    "flows/shared/render.mjs": "65b2ef30fce34f35313a1d6de828b0ccabf8ddeeafb8865692c4457aa0cda206",
+    "flows/shared/font-metrics.mjs": "5f94b544b3873dcf6f19b69ba17d851cc8754f10e1508e06c3eebade53a5500a",
+    "flows/school/image-to-appcard-flow.json": "0c0b418d716522ba6b9f613b619918bbcca414084fe1851196c8593ec12d0069",
+    "flows/school/wizard/service.mjs": "2fa497ea5eab6a73d914a89cf21d037c43849514bf725efd28077d56454e04a3",
+    "flows/school/wizard/copy.mjs": "19677687585eee4097c182ec2e7a86939a9ad574b502b12bc3ecff069b91f8e2",
+    "flows/health/image-to-appcard-flow.json": "8962f694fd0bfab93c11da66f042d9cdb6f87309d5fe06a77e8aa1bd6f98c5d2",
+    "flows/health/wizard/service.mjs": "7472926e7a774ab9c2500a5042c7e534a42c0faec1b2ed7195b63ca3d6b87e79",
+    "flows/reunion/image-to-appcard-flow.json": "e6a8b88eabdb3e6590b58515495bb46cee1f63602b4c8d36de23ae23a8f26d3c",
+    "flows/reunion/wizard/service.mjs": "a603cbb3c3516462f48182135dcb866b06e0dfcdbb002f677808a8c34ab58692"
   },
   "screen_rasters_included": false,
   "visual_approval": "not_assessed_by_sync",
