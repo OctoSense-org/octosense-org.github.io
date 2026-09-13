@@ -92,7 +92,7 @@ window.addEventListener('message', (event) => {
 });
 
 try {
-  instance = await WasmWebGL.fetch_and_instantiate_wasm('./octosense-wizard.wasm?v=9fa202972d4e85ab67507b0f8f41718655c198d59b62b34b75cfeee9a6e502f0');
+  instance = await WasmWebGL.fetch_and_instantiate_wasm('./octosense-wizard.wasm?v=c42772f62a38437ec16a9ba59f7737a3b025287f0d85bd1a52a69b9399c2adfe');
   if (!instance?.exports?.octosense_command) throw new Error('Makepad WASM did not instantiate');
   const canvas = document.querySelector('canvas');
   window.__octosense.webgl = new WasmWebGL(instance, {}, canvas);
