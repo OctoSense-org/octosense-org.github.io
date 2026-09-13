@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "id": "aircon-fresh-v2",
+  "destination": "/Users/ychen/home/Octosense-website/public/wasm/service-cards",
+  "scenes": 12,
+  "artwork_assets": 65,
+  "wasm_sha256": "c42772f62a38437ec16a9ba59f7737a3b025287f0d85bd1a52a69b9399c2adfe",
+  "source_build_sha256": "a1c54e6b14b1c0a70ed639788ce787756feb47b5c2c2eec9559673cd55cc9c16",
+  "bundle_sha256": "47642dfe2da32fca0818ee8030b30472f6355c6e221664c8d540b0c65a206fc2",
+  "provenance_sha256": "af72429bf655cf0f64645bfe1a2e6f9ed9560ce6fbb1a1a8d02a96725b2f3091",
+  "verified_build_files": 337,
+  "verified_project_sources": 432,
+  "verified_bundle_sources": 227,
+  "client_source_files": {
+    "wizard/service.mjs": "4629bce7f7dd713b1d0dd8e7868574f77993d9ab65aa8e611eaef3711b594c02",
+    "wizard/render.mjs": "a3eda8ce56cedc5c2d25e8380fa389fe4d34572416a5335b4051df018877bcd3",
+    "wizard/wizard.mjs": "30c9f56d6d1cea088c640cf9bf6bb2808e21c2bd13b776ded75b74c77902e0b1"
+  },
+  "screen_rasters_included": false,
+  "visual_approval": "not_assessed_by_sync",
+  "atomic_publication": true
+}
