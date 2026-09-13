@@ -7,6 +7,7 @@ if (root) initialize(root);
 function initialize(root) {
   const q = name => root.querySelector(`[data-${name}]`);
   const iframe=q('native-frame'), phone=q('phone'), locale=root.dataset.locale, en=locale==='en';
+  const frameURL=iframe.src;
   let session=createSession({locale}), bundle, nativeReady=false, busy=true, generation=0, snapshot=null, renderTimer, loadTimer;
   let currentId=null, awaiting=null, events=[], focusControl=null;
   const loading=q('loading'), retry=q('retry');
@@ -117,13 +118,14 @@ function initialize(root) {
   q('back').addEventListener('click',()=>advance('back'));
   q('restart').addEventListener('click',()=>advance('restart'));
   async function fetchBundle() {
-    const response=await fetch(new URL('cards.bundle.json',import.meta.url));
+    const bundleURL=new URL('cards.bundle.json',import.meta.url);bundleURL.search=new URL(import.meta.url).search;
+    const response=await fetch(bundleURL);
     if(!response.ok)throw new Error(`Card bundle: ${response.status}`);
     bundle=await response.json();mount();
   }
   retry.addEventListener('click',()=>{
     nativeReady=false;setBusy(true);retry.hidden=true;q('loading-text').textContent=strings.loading;
-    iframe.src=new URL('index.html',import.meta.url).href;
+    iframe.src=frameURL;
     loadTimer=setTimeout(()=>fail(new Error('Native startup timed out')),90000);
     if(!bundle)fetchBundle().catch(fail);
   });

@@ -3,6 +3,7 @@ import { WasmWebGL } from './makepad_platform/web_gl.js';
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
 const origin = window.location.origin;
+const assetBase = new URL('./card-assets/', window.location.href);
 const status = document.querySelector('#status');
 const events = [];
 let instance;
@@ -49,6 +50,23 @@ function mount(payload) {
   if (command.id === undefined || command.generation === undefined) {
     throw new Error('Each mount needs id and generation');
   }
+  function validateAssets(value) {
+    if (!value || typeof value !== 'object') return;
+    for (const [key, child] of Object.entries(value)) {
+      if (key === 'src' && typeof child === 'string') {
+        const url = new URL(child);
+        const tail = url.pathname.slice(assetBase.pathname.length);
+        if (url.origin !== origin || url.href !== child || !url.pathname.startsWith(assetBase.pathname)
+            || url.username || url.password || url.search || url.hash
+            || !/^[A-Za-z0-9_.-]+\/assets\/[A-Za-z0-9_.-]+$/.test(tail)
+            || tail.split('/').some(part => part === '.' || part === '..')) {
+          throw new Error('Card artwork must stay inside the iframe same-origin card-assets directory');
+        }
+      } else validateAssets(child);
+    }
+  }
+  validateAssets(command.data);
+  validateAssets(command.kit);
   send(command);
 }
 
@@ -74,7 +92,7 @@ window.addEventListener('message', (event) => {
 });
 
 try {
-  instance = await WasmWebGL.fetch_and_instantiate_wasm('./octosense-wizard.wasm');
+  instance = await WasmWebGL.fetch_and_instantiate_wasm('./octosense-wizard.wasm?v=9fa202972d4e85ab67507b0f8f41718655c198d59b62b34b75cfeee9a6e502f0');
   if (!instance?.exports?.octosense_command) throw new Error('Makepad WASM did not instantiate');
   const canvas = document.querySelector('canvas');
   window.__octosense.webgl = new WasmWebGL(instance, {}, canvas);
